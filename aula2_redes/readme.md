@@ -146,7 +146,7 @@ terraform destroy      # Destroi todos os recursos criados
 
 Abaixo, o resultado final da arquitetura criada na AWS:
 
-![Infraestrutura AWS](image.png)
+![Infraestrutura AWS](main_stack/image.png)
 
 ---
 
