@@ -1,4 +1,4 @@
-# 🛠️ Guia Completo de Solução de Problemas - Cluster EKS com kubectl
+# 🛠️ Guia de Solução de Problemas - Cluster EKS com kubectl
 
 ## 📍 Contexto Geral
 
