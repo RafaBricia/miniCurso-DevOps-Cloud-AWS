@@ -142,38 +142,6 @@ kubectl delete nodes --all
 
 - Força o EKS a recriar os Nodes (útil após mudanças de permissão)
 
-## 🚨 5. Solução de Problemas Comuns
-
-### Erro: "User cannot list resource nodes"
-
-**Causa:** Falta de mapeamento IAM → RBAC
-
-**Solução:**
-```bash
-eksctl create iamidentitymapping ...  # (como na Seção 4.1)
-```
-
-### Erro: "is not authorized to perform: sts:AssumeRole"
-
-**Causa:** O usuário não pode assumir a role do EKS
-
-**Solução:**
-```bash
-aws iam update-assume-role-policy ...  # (como na Seção 3.2)
-```
-
-### Erro: "Unable to connect to the server"
-
-**Causa:** Problema no kubeconfig ou credenciais AWS
-
-**Solução:**
-```bash
-# Verifica credenciais AWS
-aws sts get-caller-identity
-
-# Reconfigura o acesso
-aws eks update-kubeconfig ...
-```
 
 ## ✅ Conclusão
 
