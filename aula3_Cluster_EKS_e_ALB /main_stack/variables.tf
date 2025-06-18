@@ -94,4 +94,26 @@ variable "eks" {
     scaling_config_max_size = 2
     scaling_config_min_size = 2
   }
+
+
 }
+  variable "ecr_repositories" {
+    type = list(object({
+      name                 = string
+      image_tag_mutability = string
+      force_delete = bool
+  }))
+
+  default = [
+    {
+    name                 = "minicursodevopscloud-aula03/production/frontend"
+    image_tag_mutability = "MUTABLE"
+    force_delete = true
+    },
+    {
+    name                 = "minicursodevopscloud-aula03/production/backend"
+    image_tag_mutability = "MUTABLE"
+    force_delete = true
+    }
+  ]
+  } 
